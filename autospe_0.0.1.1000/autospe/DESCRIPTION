@@ -1,0 +1,18 @@
+Package: autospe
+Title: Automatic accumulation of species richness and rarefaction
+Version: 0.0.1.1000
+Authors@R: 
+    person(given = "Titouan",
+           family = "Leclerc",
+           role = c("aut", "cre"),
+           email = "t_leclerc@hotmail.fr")
+Description: With a dataset in "long" format, automatically calculate the rarefaction (from the vegan package) and the cumulative richness of species. Asks only for one species variable, one session and one (optional) number of individuals observed.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: vegan, tidyverse
+NeedsCompilation: no
+Packaged: 2021-10-15 16:17:19 UTC; demo1
+Author: Titouan Leclerc [aut, cre]
+Maintainer: Titouan Leclerc <t_leclerc@hotmail.fr>
