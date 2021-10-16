@@ -16,7 +16,7 @@ My.plot.T(dataset, VarSp, VarT, Occ)
 \item{Occ}{Facultatif : Variable du nombre d'individu observé / int}
 }
 \value{
-data.frame en format "wide"
+graphique des courbes de la richesse cumulé et de la raréfaction classé par VarT
 }
 \description{
 Créer un graphique de la raréfaction - calculé à l'aide du package vegan - et de la richesse spécifique cumulé depuis un jeu de données au format long
