@@ -1,20 +1,18 @@
-#'Extrapolation du nombre d'espèces observable
+#' Extrapolation du nombre d'espèces
+#'
+#' Extrapolation du nombre d'espèces attendu avec la fonction specpool du package vegan depuis un jeu de données au format long
+#'
+#' @return data.frame en format "wide"
 #'
 #'
+#' @param dataset Jeu de données en format long / data.frame
+#' @param VarSp Variable comprenant les especes / factor
+#' @param VarT Variable de groupe : session, transects, sites, dates / int
+#' @param Occ Facultatif : Variable du nombre d'individu observé / int
 #'
-#'My.matrice(dataset, VarSp, VarT, Occ)
-#'
-#'
-#' @import tidyverse
-#' @import vegan
-#'
-#' @param dataset data
-#' @param VarSp data
-#' @param VarT data
-#' @param Occ data
+#' @importFrom vegan specpool
 #'
 #' @export
-#'
 
 
 

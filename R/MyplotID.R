@@ -1,20 +1,24 @@
-#'Graphique richesse cumulé & raréfaction x=ID
+#' Graphique de raréfaction et richesse cumulé
+#'
+#' Créer un graphique de la raréfaction - calculé à l'aide du package vegan - et de la richesse spécifique cumulé depuis un jeu de données au format long.
+#' x = les identifiants de VarT
+#'
+#' @return data.frame en format "wide"
 #'
 #'
+#' @param dataset Jeu de données en format long / data.frame
+#' @param VarSp Variable comprenant les especes / factor
+#' @param VarT Variable de groupe : session, transects, sites, dates / int
+#' @param Occ Facultatif : Variable du nombre d'individu observé / int
 #'
-#'My.matrice(dataset, VarSp, VarT, Occ)
-#'
-#'
-#' @import tidyverse
-#' @import vegan
-#'
-#' @param dataset data
-#' @param VarSp data
-#' @param VarT data
-#' @param Occ data
+#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 geom_line
+#' @importFrom ggplot2 geom_ribbon
+#' @importFrom ggplot2 aes
+#' @importFrom ggplot2 geom_point
 #'
 #' @export
-#'
+
 
 My.plot.id <- function(dataset, VarSp, VarT, Occ) {
 

@@ -1,16 +1,18 @@
-#'Créer une matrice a partir d'un jeu données format "long"
+#' Créer une matrice
+#'
+#' Créer une matrice -architeture attendu par le package vegan- depuis un jeu de données au format long
+#'
+#' @return data.frame en format "wide"
 #'
 #'
+#' @param dataset Jeu de données en format long / data.frame
+#' @param VarSp Variable comprenant les especes / factor
+#' @param VarT Variable de groupe : session, transects, sites, dates / int
+#' @param Occ Facultatif : Variable du nombre d'individu observé / int
 #'
-#'My.matrice(dataset, VarSp, VarT, Occ)
-#'
-#'
-#' @import tidyverse
-#'
-#' @param dataset data
-#' @param VarSp data
-#' @param VarT data
-#' @param Occ data
+#' @importFrom stats aggregate
+#' @importFrom tidyr pivot_wider
+#' @importFrom magrittr %>%
 #'
 #' @export
 
@@ -27,7 +29,7 @@ My.matrice <- function(dataset, VarSp, VarT, Occ) {
 
     df <- unique(df[ , 1:2 ] )
 
-    df$occ<-1
+    df$Occ<-1
 
   } else {
 
@@ -45,7 +47,7 @@ My.matrice <- function(dataset, VarSp, VarT, Occ) {
   df<-df[!df[,2]=="",]
 
   df <- df %>%
-    pivot_wider(names_from = VarSp, values_from = occ)
+    pivot_wider(names_from = VarSp, values_from = Occ)
 
   df[is.na(df)] <- 0
 

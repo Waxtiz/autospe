@@ -2,22 +2,22 @@
 % Please edit documentation in R/Myextrapo.R
 \name{My.extrapo}
 \alias{My.extrapo}
-\title{Extrapolation du nombre d'espèces observable}
+\title{Extrapolation du nombre d'espèces}
 \usage{
 My.extrapo(dataset, VarSp, VarT, Occ)
 }
 \arguments{
-\item{dataset}{data}
+\item{dataset}{Jeu de données en format long / data.frame}
 
-\item{VarSp}{data}
+\item{VarSp}{Variable comprenant les especes / factor}
 
-\item{VarT}{data}
+\item{VarT}{Variable de groupe : session, transects, sites, dates / int}
 
-\item{Occ}{data}
+\item{Occ}{Facultatif : Variable du nombre d'individu observé / int}
+}
+\value{
+data.frame en format "wide"
 }
 \description{
-Extrapolation du nombre d'espèces observable
-}
-\details{
-My.matrice(dataset, VarSp, VarT, Occ)
+Extrapolation du nombre d'espèces attendu avec la fonction specpool du package vegan depuis un jeu de données au format long
 }

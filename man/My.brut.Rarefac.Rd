@@ -7,17 +7,18 @@
 My.brut.Rarefac(dataset, VarSp, VarT, Occ)
 }
 \arguments{
-\item{dataset}{data}
+\item{dataset}{Jeu de données en format long / data.frame}
 
-\item{VarSp}{data}
+\item{VarSp}{Variable comprenant les especes / factor}
 
-\item{VarT}{data}
+\item{VarT}{Variable de groupe : session, transects, sites, dates / int}
 
-\item{Occ}{data}
+\item{Occ}{Facultatif : Variable du nombre d'individu observé / int}
+}
+\value{
+data.frame en format "wide"
 }
 \description{
-Calcul de la raréfaction
-}
-\details{
-My.matrice(dataset, VarSp, VarT, Occ)
+Créer une matrice -architecture attendu par le package vegan- depuis un jeu de données au format long,
+et calcul en dernière colonne la raréfaction en utilisant specaccum du package vegan
 }

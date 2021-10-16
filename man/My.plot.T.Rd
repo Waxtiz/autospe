@@ -2,22 +2,23 @@
 % Please edit documentation in R/MyplotT.R
 \name{My.plot.T}
 \alias{My.plot.T}
-\title{Graphique richesse cumulé & raréfaction x=T}
+\title{Graphique de raréfaction et richesse cumulé}
 \usage{
 My.plot.T(dataset, VarSp, VarT, Occ)
 }
 \arguments{
-\item{dataset}{data}
+\item{dataset}{Jeu de données en format long / data.frame}
 
-\item{VarSp}{data}
+\item{VarSp}{Variable comprenant les especes / factor}
 
-\item{VarT}{data}
+\item{VarT}{Variable de groupe : session, transects, sites, dates / int}
 
-\item{Occ}{data}
+\item{Occ}{Facultatif : Variable du nombre d'individu observé / int}
+}
+\value{
+data.frame en format "wide"
 }
 \description{
-Graphique richesse cumulé & raréfaction x=T
-}
-\details{
-My.matrice(dataset, VarSp, VarT, Occ)
+Créer un graphique de la raréfaction - calculé à l'aide du package vegan - et de la richesse spécifique cumulé depuis un jeu de données au format long
+x = Vart
 }

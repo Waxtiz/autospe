@@ -2,22 +2,22 @@
 % Please edit documentation in R/Mymatrice.R
 \name{My.matrice}
 \alias{My.matrice}
-\title{Créer une matrice a partir d'un jeu données format "long"}
+\title{Créer une matrice}
 \usage{
 My.matrice(dataset, VarSp, VarT, Occ)
 }
 \arguments{
-\item{dataset}{data}
+\item{dataset}{Jeu de données en format long / data.frame}
 
-\item{VarSp}{data}
+\item{VarSp}{Variable comprenant les especes / factor}
 
-\item{VarT}{data}
+\item{VarT}{Variable de groupe : session, transects, sites, dates / int}
 
-\item{Occ}{data}
+\item{Occ}{Facultatif : Variable du nombre d'individu observé / int}
+}
+\value{
+data.frame en format "wide"
 }
 \description{
-Créer une matrice a partir d'un jeu données format "long"
-}
-\details{
-My.matrice(dataset, VarSp, VarT, Occ)
+Créer une matrice -architeture attendu par le package vegan- depuis un jeu de données au format long
 }

@@ -1,22 +1,20 @@
-#'Calcul de la raréfaction
+#' Calcul de la raréfaction
+#'
+#' Créer une matrice -architecture attendu par le package vegan- depuis un jeu de données au format long,
+#' et calcul en dernière colonne la raréfaction en utilisant specaccum du package vegan
+#'
+#' @return data.frame en format "wide"
 #'
 #'
+#' @param dataset Jeu de données en format long / data.frame
+#' @param VarSp Variable comprenant les especes / factor
+#' @param VarT Variable de groupe : session, transects, sites, dates / int
+#' @param Occ Facultatif : Variable du nombre d'individu observé / int
 #'
-#'My.matrice(dataset, VarSp, VarT, Occ)
-#'
-#'
-#' @import tidyverse
-#' @import vegan
-#'
-#' @param dataset data
-#' @param VarSp data
-#' @param VarT data
-#' @param Occ data
+#' @importFrom vegan specaccum
 #'
 #' @export
-#'
-#'
-#'
+
 My.brut.Rarefac <- function(dataset, VarSp, VarT, Occ) {
 
   df<-My.matrice(dataset, VarSp, VarT, Occ)
