@@ -1,6 +1,6 @@
 #' Graphique de raréfaction et richesse cumulé
 #'
-#' Créer un graphique de la raréfaction - calculé à l'aide du package vegan - et de la richesse spécifique cumulé depuis un jeu de données au format long
+#' Créer un graphique de la raréfaction - calculé à l'aide du package vegan - et de la richesse spécifique cumulé depuis un jeu de données au format long.
 #' x = Vart
 #'
 #' @return graphique des courbes de la richesse cumulé et de la raréfaction classé par VarT
@@ -35,8 +35,7 @@ My.plot.T <- function(dataset, VarSp, VarT, Occ) {
     geom_line(aes(y=Richness, color="Rarefaction"),linetype = "dashed")+
     geom_point(aes(y=Richness, color="Rarefaction"))+
     geom_ribbon(aes(y=Richness, ymin=(Richness-SD),ymax=(Richness+SD), fill="SD of rarefaction"),alpha=0.1)+
-    scale_color_manual(name = "",
-                       values = c("Rarefaction" = "blue", "Cumulative species richness" = "red"))+
+    scale_color_manual(name = "", values = c("Rarefaction" = "blue", "Cumulative species richness" = "red"))+
     scale_fill_manual(name = "", values = c("SD of rarefaction" = "blue")) +
     scale_x_continuous("Sessions", breaks = ggsp2$VarT)+
     ylab("Richness of species")+
